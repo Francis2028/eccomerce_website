@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Header from "./components/Header";
-import SelectedProduct from "./components/selectedproduct";
+import SelectedProduct from "./components/SelectedProduct";
 import SearchBar from "./components/SearchBar";
 import type { ProductInterface } from "./types";
 
