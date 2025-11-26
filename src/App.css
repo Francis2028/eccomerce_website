@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+/* ===========================
+   GLOBAL RESET
+=========================== */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+.header-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 30px 60px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+/* ===========================
+   SEARCH BAR
+=========================== */
+.search-bar {
+    padding: 25px 50px;
+    width: 100%;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* ===========================
+   PRODUCT GRID
+=========================== */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* Product Card */
+.product-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.product-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+    .description{
+
+    white-space: nowrap; /* Prevents text from wrapping to the next line */
+    overflow: hidden;    /* Hides any content that overflows the element's box */
+    text-overflow: ellipsis; /* Displays an ellipsis (...) when text overflows */
+    width: 200px; /* Or any defined width for the container */
+    }
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+
+/* 📱 Mobile (0–600px) */
+@media (max-width: 600px) {
+    .header-info {
+        flex-direction: column;
+        padding: 15px;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .search-bar {
+        padding: 15px;
+    }
+
+    .product-container {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 10px;
+    }
+ 
+
+
+
+    .product-card {
+        padding: 15px;
+    }
+
+    .product-card img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* 📱📲 Tablet (601px–900px) */
+@media (max-width: 900px) and (min-width: 601px) {
+    .header-info {
+        padding: 20px 30px;
+    }
+
+    .search-bar {
+        padding: 20px 30px;
+    }
+
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 15px;
+    }
+
+    .product-card img {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+/* 💻 Small Desktop (900px–1200px) */
+@media (max-width: 1200px) and (min-width: 901px) {
+    .product-container {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 20px;
+    }
+}
